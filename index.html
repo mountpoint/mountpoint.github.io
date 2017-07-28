@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Cat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .swirl {
+            transition: transform 2s;
+            transform: scale(0) rotate(3000deg);
+        }
+    </style>
 </head>
 <body>
-    Hello =)
+    <a href="javascript:;" id="link">Жми =)</a>
+
+    <script>
+        document.getElementById('link').addEventListener('click', function() {
+            var that = this;
+
+            that.textContent = 'Уиииииии!';
+
+            setTimeout(function() {
+                that.classList.add('swirl');
+            }, 1000);
+
+            setTimeout(function() {
+                location.href = 'https://me.javascript.in.ua';
+            }, 3000);
+        }, false);
+    </script>
 </body>
 </html>
