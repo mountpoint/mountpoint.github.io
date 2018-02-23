@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#red {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #f00;
+    border: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -120px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px #787878;
+    outline: none;
+    cursor: pointer;
+}
+
+#red:hover {
+    background: #f50000;
+}
+
+#text {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.swirl {
+    transition: transform 2s;
+    transform: scale(0) rotate(3000deg);
+}
