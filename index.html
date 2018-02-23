@@ -12,12 +12,28 @@
             padding: 0;
         }
 
-        a {
-            width: 100%;
+        #red {
+            width: 240px;
+            height: 240px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: #f00;
+            border: 0;
             position: absolute;
+            top: 35%;
+            left: 50%;
+            margin-left: -120px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #text {
+            display: none;
+            position: absolute;
+            width: 100%;
             top: 45%;
             text-align: center;
-            font-size: 50px;
+            font-size: 30px;
         }
 
         .swirl {
@@ -27,16 +43,21 @@
     </style>
 </head>
 <body>
-    <a href="javascript:;" id="link">Жми =)</a>
+    <button id="red">Big red button</button>
+    <p id="text">Зачеееееем?!?!?!?!?!?</p>
 
     <script>
-        document.getElementById('link').addEventListener('click', function() {
-            var that = this;
+        var
+            red = document.getElementById('red'),
+            text = document.getElementById('text')
+        ;
 
-            that.textContent = 'Уиииииии!';
+        red.addEventListener('click', function() {
+            this.style.display = 'none';
+            text.style.display = 'block';
 
             setTimeout(function() {
-                that.classList.add('swirl');
+                text.classList.add('swirl');
             }, 1000);
 
             setTimeout(function() {
